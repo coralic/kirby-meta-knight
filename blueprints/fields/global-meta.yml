@@ -1,0 +1,49 @@
+type: group
+fields:
+  metaHeadline:
+    label:
+      en: Global Meta Information
+      de: Globale Metadaten-Einstellungen
+    type: headline
+    numbered: false
+  metaTemplate:
+    label:
+      en: Title Template
+      de: Titel-Vorlage
+    type: text
+    width: 1/2
+    help:
+      de: Eine Vorlage, die für alle Seitentitel verwendet werden soll. "\{\{ title }}" wird durch den Unterseitentitel oder den benutzerdefinierten Titel ersetzt.
+      en: A template that is used for all page titles as it should be displayed on search engines. "\{\{ title }}" will be replaced by the page title or the user defined title.
+  metaDescription:
+    label:
+      de: Beschreibung
+      en: Description
+    type: text
+    width: 1/2
+    help:
+      de: Eine kurze Beschreibung des Inhalts der Seite, welche von Suchmaschinen angezeigt werden soll.
+      en: A short description of the site/page that will be displayed underneath the page title by search engines.
+  metaAuthor:
+    label:
+      de: 'Autor*innen'
+      en: Author/s
+    width: 1/2
+    type: text
+    help:
+      de: Der Name der Autor\*innen der Seite. Können Personen oder eine Organisation sein.
+      en: The name of the author of the page. Can be an entity or a person.
+  metaImage:
+    label:
+      de: Bild
+      en: Image
+    width: 1/2
+    type: files
+    multiple: false
+  metaPhoneNumber:
+    width: 1/2
+    label:
+      de: Telefonnummer
+      en: Phone Number
+    icon: phone
+    type: text

@@ -1,0 +1,85 @@
+type: group
+fields:
+  metaHeadline:
+    label:
+      de: Grundlegende Metadaten
+      en: Basic Meta Information
+    type: headline
+    numbered: false
+  metaTitle:
+    label:
+      en: Title (Override)
+      de: Titel (Überschreiben)
+    type: text
+    placeholder: '{{ page.title }}'
+    help:
+      de: Ein benutzerdefinierter Titel, welcher in der Vorlage verwendet werden kann. Überschreibt den normalen Seitentitel.
+      en: A user defined title that can be used in the template. Overrides the normal page title.
+  metaTemplate:
+    label:
+      en: Title Template (Override)
+      de: Benutzerdefinierte Titel-Vorlage
+    type: text
+    width: 1/2
+    placeholder: '{{ site.metaTemplate }}'
+    help:
+      de: Eine Vorlage, die für alle Seitentitel verwendet werden soll. "\{\{ title }}" wird durch den Unterseitentitel oder den benutzerdefinierten Titel ersetzt.
+      en: A template that is used for all page titles as it should be displayed on search engines. "\{\{ title }}" will be replaced by the page title or the user defined title.
+  inheritMetaTemplate:
+    label:
+      en: Inherit title template for child pages?
+      de: Sollen Unterseiten die Titel-Vorlage erben?
+    type: toggle
+    width: 1/2
+    help:
+      de: Wenn aktiviert, wird die Titel-Vorlage von Unterseiten übernommen.
+      en: If enabled, the title template will be inherited by child pages.
+    text:
+      - de: Nicht vererben, globale Titelvorlage verwenden
+        en: Don't inherit, use global title template
+      - de: Vorlage vererben, Unterseiten benutzen
+        en: Inherit, use parents' page title template
+  metaDescription:
+    label:
+      de: Beschreibung
+      en: Description
+    type: text
+    placeholder: '{{ site.metaDescription }}'
+    help:
+      de: Eine kurze Beschreibung des Inhalts der Seite, welche von Suchmaschinen angezeigt werden soll.
+      en: A short description of the site/page that will be displayed underneath the page title by search engines.
+  metaCanonicalUrl:
+    label:
+      de: Kanonische URL
+      en: Canonical URL
+    type: url
+    width: 1/2
+    placeholder: '{{ page.canonicalUrl }}'
+    help:
+      en: The canonical URL of the page. Will default to page URL when this field is empty.
+      de: Die kanonische URL der Seite. Damit kann bei mehrfach verwendetem Inhalt die Originalressource ausgewiesen werden. Wenn dieses Feld leer ist, wird standardmäßig die URL der Seite verwendet.
+  metaAuthor:
+    label:
+      de: 'Autor*innen'
+      en: Author/s
+    width: 1/2
+    type: text
+    placeholder: '{{ site.metaAuthor }}'
+    help:
+      de: Der Name der Autor\*innen der Seite. Können Personen oder eine Organisation sein.
+      en: The name of the author of the page. Can be an entity or a person.
+  metaImage:
+    label:
+      de: Bild
+      en: Image
+    width: 1/2
+    type: files
+    multiple: false
+  metaPhoneNumber:
+    width: 1/2
+    label:
+      de: Telefonnummer
+      en: Phone Number
+    icon: phone
+    placeholder: '{{ site.metaPhoneNumber }}'
+    type: text

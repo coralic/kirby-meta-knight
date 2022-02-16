@@ -1,0 +1,101 @@
+label:
+  de: Metadaten & SEO
+  en: Meta Information (SEO)
+icon: search
+
+columns:
+  basicMeta:
+    width: 2/3
+    sections:
+      basicMeta:
+        type: fields
+        fields:
+          basicMeta:
+            extends: fields/basic-meta
+            fields:
+              metaTitle:
+                width: 1/2
+              metaDescription:
+                width: 1/2
+              metaAuthor:
+                width: 1
+              metaTemplate: false
+              inheritMetaTemplate: false
+              metaCanonicalUrl: false
+              metaPhoneNumber: false
+              metaImage: false
+  basicMetaSidebar:
+    width: 1/3
+    sticky: true
+    sections:
+      googlePreview:
+        headline:
+          en: Google Search Preview
+          de: Google Suche
+        type: google-preview
+  openGraph:
+    width: 2/3
+    sections:
+      openGraph:
+        type: fields
+        fields:
+          openGraph:
+            extends: fields/open-graph
+            fields:
+              ogTitle:
+                width: 1/2
+              ogDescription:
+                width: 1/2
+              ogImage:
+                width: 1
+              ogSiteName: false
+              ogTemplate: false
+              inheritOgTemplate: false
+              ogUrl: false
+              ogAudio: false
+              ogVideo: false
+              ogDeterminer: false
+              ogType: false
+              ogArticlePublished: false
+              ogArticleModified: false
+              ogArticleExpiration: false
+              ogArticleAuthor: false
+              ogArticleSection: false
+              ogArticleTags: false
+  openGraphSidebar:
+    width: 1/3
+    sticky: true
+    sections:
+      facebookPreview:
+        headline:
+          en: Facebook Sharing Preview
+          de: Facebook Sharing
+        type: facebook-preview
+  twitter:
+    width: 2/3
+    sections:
+      twitter:
+        type: fields
+        fields:
+          twitter:
+            extends: fields/twitter
+            fields:
+              twitterTitle:
+                width: 1/2
+              twitterDescription:
+                width: 1/2
+              twitterTemplate: false
+              inheritTwitterTemplate: false
+              twitterCardType: false
+              twitterImage:
+                width: 1
+              twitterSite: false
+  twitterSidebar:
+    width: 1/3
+    sticky: true
+    sections:
+      twitterPreview:
+        headline:
+          en: Twitter Card Preview
+          de: Twitter Card
+        type: twitter-preview

@@ -1,0 +1,210 @@
+type: group
+fields:
+  ogHeadline:
+    label: Open Graph (Facebook)
+    type: headline
+    numbered: false
+  ogTitle:
+    label:
+      de: OG-Titel
+      en: OG Title
+    help:
+      de: Der Titel der Seite, wie er in Open Graph erscheinen soll. Wird *Seitentitel* als Fallback verwenden.
+      en: The title of your object as it should appear within the graph. Will use *page title* as fallback.
+    placeholder: '{{ page.title }}'
+    type: text
+  ogTemplate:
+    label:
+      en: Title Template (Override)
+      de: Benutzerdefinierte OG-Titelvorlage
+    type: text
+    width: 1/2
+    placeholder: '{{ site.ogTemplate }}'
+    help:
+      de: Eine Vorlage, die für alle Open Graph-Titel verwendet werden soll. "\{\{ title }}" wird durch den Unterseitentitel oder den benutzerdefinierten Titel ersetzt.
+      en: A template that is used for all Open Graph titles. "\{\{ title }}" will be replaced by the page title or the user defined title.
+  inheritOgTemplate:
+    label:
+      en: Inherit Open Graph template for child pages?
+      de: Sollen Unterseiten die OG-Titelvorlage erben?
+    type: toggle
+    width: 1/2
+    help:
+      de: Wenn aktiviert, wird die OG-Titelvorlage von Unterseiten übernommen.
+      en: If enabled, the OG title template will be inherited by child pages.
+    text:
+      - de: Nicht vererben, globale Titelvorlage verwenden
+        en: Don't inherit, use global title template
+      - de: Vorlage vererben, Unterseiten benutzen
+        en: Inherit, use parents' page title template
+  ogDescription:
+    label:
+      de: OG-Beschreibung
+      en: OG Description
+    help:
+      de: Eine ein- bis zweisätzige Beschreibung der Seite. Wird *Seitenbeschreibung*, bzw. die globale *Open Graph-* oder *Seitenbeschreibung* als Fallback verwenden.
+      en: A one to two sentence description of your object. Will use *page description* and *site description* as fallbacks.
+    placeholder: '{{ page.metaDescription.or(site.ogDescription.or(site.metaDescription)) }}'
+    type: text
+  ogImage:
+    label:
+      de: OG-Bild (1200x630)
+      en: OG Image (1200x630)
+    help:
+      en: Wird automatisch zugeschnitten.
+      de: An image which should represent your object within the graph. Will be cropped automatically. Will use *site OG image* as fallback.
+    type: files
+    width: 1/2
+    multiple: false
+    uploads: seo-image
+  ogSiteName:
+    label:
+      de: OG-Seitenname
+      en: OG Site Name
+    help:
+      de: Wenn die Seite Teil einer größeren Website ist, gebe den Namen an der für die gesamte Website angezeigt werden soll. Wird der *Seitentitel* als Fallback verwenden.
+      en: If your object is part of a larger web site, the name which should be displayed for the overall site. Will use *site title* as fallback.
+    placeholder: '{{ site.ogSiteName.or(site.title) }}'
+    type: text
+    width: 1/2
+  ogUrl:
+    label:
+      de: Kanonische OG-URL
+      en: OG URL
+    help:
+      de: Die kanonische URL, die als permanente ID in den Open Graph-Metadaten verwendet werden soll.
+      en: The canonical URL of your object that will be used as its permanent ID in the graph.
+    placeholder: '{{ page.canonicalUrl }}'
+    type: url
+    width: 1/2
+  ogAudio:
+    label:
+      de: OG-Audio
+      en: OG Audio
+    help:
+      de: Eine URL zu einer Audio-Datei, die diese Website ergänzt.
+      en: The URL of an audio file to accompany this object.
+    type: url
+    width: 1/2
+  ogVideo:
+    label:
+      de: OG-Video
+      en: OG Video
+    help:
+      de: Eine URL zu einer Video-Datei, die diese Website ergänzt.
+      en: The URL of a video file that complements this object.
+    type: url
+    width: 1/2
+#  ogType:
+#    label:
+#      de: OG-Seitentyp
+#      en: OG Type
+#    help:
+#      de: Der Seitentyp. Je nach Angabe, können auch andere Eigenschaften erforderlich sein.
+#      en: The type of your object. Depending on the type you specify, other properties may also be required.
+#    type: select
+#    default: website
+#    width: 1/2
+#    options:
+#      website:
+#        de: Website
+#        en: Website
+#      article:
+#        de: Artikel
+#        en: Article
+#  ogArticlePublished:
+#    label:
+#      de: OG-Artikel-Veröffentlichungsdatum
+#      en: OG Article Published Time
+#    type: date
+#    time: true
+#    default: now
+#    width: 1/3
+#    when:
+#      ogType: article
+#  ogArticleModified:
+#    label:
+#      de: OG-Artikel-Änderungsdatum
+#      en: OG Article Modified Time
+#    type: date
+#    time: true
+#    default: now
+#    width: 1/3
+#    when:
+#      ogType: article
+#  ogArticleExpiration:
+#    label:
+#      de: OG-Artikel-Ablaufdatum
+#      en: OG Article Expiration Time
+#    type: date
+#    time: true
+#    default: now
+#    width: 1/3
+#    when:
+#      ogType: article
+#  ogArticleAuthor:
+#    label:
+#      de: 'OG-Artikel-Autor*innen'
+#      en: OG Article Author/s
+#    type: structure
+#    fields:
+#      url:
+#        label: URL
+#        type: url
+#        required: true
+#      firstname:
+#        label:
+#          de: Vorname
+#          en: First Name
+#        type: text
+#        width: 1/2
+#      lastname:
+#        label:
+#          de: Nachname
+#          en: Last Name
+#        type: text
+#        width: 1/2
+#      username:
+#        label:
+#          de: Nutzername
+#          en: Username
+#        type: text
+#        width: 1/2
+#      gender:
+#        label: Gender
+#        type: select
+#        options:
+#          male:
+#            de: Männlich
+#            en: Male
+#          female:
+#            de: Weiblich
+#            en: Female
+#          other:
+#            de: Keine Angabe/Andere
+#            en: Other
+#        width: 1/2
+#    when:
+#      ogType: article
+#  ogArticleSection:
+#    label:
+#      de: OG-Artikelkategorie
+#      en: OG Article Section
+#    help:
+#      de: Die Kategorie, in der dieser Artikel sich befindet, z.b. Technologie.
+#      en: A high-level section name. E.g. Technology
+#    type: text
+#    width: 1/2
+#    when:
+#      ogType: article
+#  ogArticleTags:
+#    label:
+#      de: OG-Artikel-Schlagworte
+#      en: OG Article Tags
+#    help:
+#      de: Schlagworte, die diesen Artikel beschreiben.
+#      en: Tag words associated with this article
+#    type: tags
+#    width: 1/2
+#    when:
+#      ogType: article

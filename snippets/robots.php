@@ -1,63 +1,63 @@
-<?php // Robots ?>
-
 <?php
 
-  $robots_content = [];
+/**
+ * @var Kirby\Cms\Page $page
+ * @var Kirby\Cms\Site $site
+ */
 
-  if ( param("page") !== null) {
-      array_push($robots_content, "noindex");
-  } elseif ($page->robots_noindex()->isNotEmpty() && $page->robots_noindex()->value() !== 'default' ) {
-    if ($page->robots_noindex()->value() === 'enabled') {
-      array_push($robots_content, "noindex");
-    }
-  } else {
-    if ($site->robots_noindex()->value() === 'enabled') {
-      array_push($robots_content, "noindex");
-    }
+$robots_content = [];
+
+if (param("page") !== null) {
+  array_push($robots_content, "noindex");
+} elseif ($page->robotsNoIndex()->isNotEmpty() && $page->robotsNoIndex()->value() !== 'default') {
+  if ($page->robotsNoIndex()->value() === 'enabled') {
+    array_push($robots_content, "noindex");
   }
-
-  if ($page->robots_nofollow()->isNotEmpty() && $page->robots_nofollow()->value() !== 'default' ) {
-    if ($page->robots_nofollow()->value() === 'enabled') {
-      array_push($robots_content, "nofollow");
-    }
-  } else {
-    if ($site->robots_nofollow()->value() === 'enabled') {
-      array_push($robots_content, "nofollow");
-    }
+} else {
+  if ($site->robotsNoIndex()->value() === 'enabled') {
+    array_push($robots_content, "noindex");
   }
+}
 
-  if ($page->robots_noarchive()->isNotEmpty() && $page->robots_noarchive()->value() !== 'default' ) {
-    if ($page->robots_noarchive()->value() === 'enabled') {
-      array_push($robots_content, "noarchive");
-    }
-  } else {
-    if ($site->robots_noarchive()->value() === 'enabled') {
-      array_push($robots_content, "noarchive");
-    }
+if ($page->robotsNoFollow()->isNotEmpty() && $page->robotsNoFollow()->value() !== 'default') {
+  if ($page->robotsNoFollow()->value() === 'enabled') {
+    array_push($robots_content, "nofollow");
   }
-
-  if ($page->robots_noimageindex()->isNotEmpty() && $page->robots_noimageindex()->value() !== 'default' ) {
-    if ($page->robots_noimageindex()->value() === 'enabled') {
-      array_push($robots_content, "noimageindex");
-    }
-  } else {
-    if ($site->robots_noimageindex()->value() === 'enabled') {
-      array_push($robots_content, "noimageindex");
-    }
+} else {
+  if ($site->robotsNoFollow()->value() === 'enabled') {
+    array_push($robots_content, "nofollow");
   }
+}
 
-  if ($page->robots_nosnippet()->isNotEmpty() && $page->robots_nosnippet()->value() !== 'default' ) {
-    if ($page->robots_nosnippet()->value() === 'enabled') {
-      array_push($robots_content, "nosnippet");
-    }
-  } else {
-    if ($site->robots_nosnippet()->value() === 'enabled') {
-      array_push($robots_content, "nosnippet");
-    }
+if ($page->robotsNoArchive()->isNotEmpty() && $page->robotsNoArchive()->value() !== 'default') {
+  if ($page->robotsNoArchive()->value() === 'enabled') {
+    array_push($robots_content, "noarchive");
   }
+} else {
+  if ($site->robotsNoArchive()->value() === 'enabled') {
+    array_push($robots_content, "noarchive");
+  }
+}
 
-  $robots_content = implode(", ", $robots_content)
+if ($page->robotsNoImageIndex()->isNotEmpty() && $page->robotsNoImageIndex()->value() !== 'default') {
+  if ($page->robotsNoImageIndex()->value() === 'enabled') {
+    array_push($robots_content, "noimageindex");
+  }
+} else {
+  if ($site->robotsNoImageIndex()->value() === 'enabled') {
+    array_push($robots_content, "noimageindex");
+  }
+}
 
-?>
+if ($page->robotsNoSnippet()->isNotEmpty() && $page->robotsNoSnippet()->value() !== 'default') {
+  if ($page->robotsNoSnippet()->value() === 'enabled') {
+    array_push($robots_content, "nosnippet");
+  }
+} else {
+  if ($site->robotsNoSnippet()->value() === 'enabled') {
+    array_push($robots_content, "nosnippet");
+  }
+}
 
-<meta name="robots" content="<?= $robots_content ?>" />
+$robots_content = implode(", ", $robots_content);
+e($robots_content, '<meta name="robots" content="' . $robots_content . '" />');

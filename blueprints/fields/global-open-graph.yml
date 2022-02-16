@@ -1,0 +1,46 @@
+type: group
+fields:
+  ogHeadline:
+    label: Open Graph (Facebook)
+    type: headline
+    numbered: false
+  ogTemplate:
+    label:
+      de: OG-Titelvorlage
+      en: OG Title Template
+    help:
+      de: Eine Vorlage, die für alle Open Graph-Titel verwendet werden soll. "\{\{ title }}" wird durch den Unterseitentitel oder den benutzerdefinierten Titel ersetzt.
+      en: A template that is used for all Open Graph titles. "\{\{ title }}" will be replaced by the page title or the user defined title.
+    width: 1/2
+    type: text
+  ogDescription:
+    label:
+      de: OG-Beschreibung
+      en: OG Description
+    help:
+      de: Eine ein- bis zweisätzige Beschreibung der Seite. Wird als Fallback verwendet, wenn keine Seitenbeschreibung angegeben ist..
+      en: A one to two sentence description of your object. Will be used as fallback if no page description is specified.
+    placeholder: '{{ site.metaDescription }}'
+    width: 1/2
+    type: text
+  ogImage:
+    label:
+      de: OG-Bild (1200x630)
+      en: OG Image (1200x630)
+    help:
+      en: Wird automatisch zugeschnitten und steht als Fallback zur Verfügung.
+      de: An image which should represent your object within the graph. Will be cropped automatically. Will be used as fallback if no image is specified.
+    type: files
+    width: 1/2
+    multiple: false
+    uploads: seo-image
+  ogSiteName:
+    label:
+      de: OG-Seitenname
+      en: OG Site Name
+    help:
+      de: Wenn die Seite Teil einer größeren Website ist, gebe den Namen an der für die gesamte Website angezeigt werden soll. Wird als Fallback verwendet, wenn kein *Seitenname* angegeben ist.
+      en: If your object is part of a larger web site, the name which should be displayed for the overall site. Will be used as fallback if no site name is specified.
+    placeholder: '{{ site.title }}'
+    type: text
+    width: 1/2

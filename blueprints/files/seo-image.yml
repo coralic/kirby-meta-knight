@@ -5,13 +5,19 @@ accept:
 
 fields:
   alt:
-    label: Alt Text
+    label:
+      de: Alternativer Text
+      en: Alt Text
     type: text
     width: 1/2
   link:
-    label: Link
+    label:
+      de: Link
+      en: Link
     type: url
     width: 1/2
   caption:
-    label: Caption
+    label:
+      de: Bildunterschrift
+      en: Caption
     type: textarea

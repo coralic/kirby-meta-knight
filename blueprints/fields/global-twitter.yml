@@ -1,0 +1,71 @@
+type: group
+fields:
+  twitterHeadline:
+    label:
+      en: Twitter Card
+      de: Twitter-Karte
+    type: headline
+    numbered: false
+  twitterTemplate:
+    label:
+      en: Twitter Title Template
+      de: Twitter-Titelvorlage
+    type: text
+    width: 1/2
+    help:
+      de: Eine Vorlage, die für alle Twitterkarten-Titel verwendet werden soll. "\{\{ title }}" wird durch den Unterseitentitel oder den benutzerdefinierten Titel ersetzt.
+      en: A template that is used for all Twitter card titles. "\{\{ title }}" will be replaced by the page title or the user defined title.
+  twitterDescription:
+    label:
+      de: Twitter-Beschreibung
+      en: Twitter Description
+    type: text
+    width: 1/2
+    maxlength: 300
+    placeholder: "{{ site.metaDescription }}"
+    help:
+      de: Eine ein- bis zweisätzige Beschreibung der Seite. Wird als Fallback verwendet, wenn keine Seitenbeschreibung angegeben ist.
+      en: A one to two sentence description of your page. Will be used as fallback if no page description is specified.
+  twitterImage:
+    label:
+      en: Twitter Image (1200x675)
+      de: Twitter-Bild (1200x675)
+    help:
+      de: Wird automatisch zugeschnitten.
+      en: Will be cropped automatically.
+    type: files
+    uploads: seo-image
+    multiple: false
+    width: 1/2
+  twitterCardType:
+    label:
+      de: Kartentyp
+      en: Card Type
+    width: 1/2
+    type: select
+    default: summary
+    required: true
+    options:
+      summary:
+        de: Übersichtskarte
+        en: Summary Card
+      summary_large_image:
+        de: Übersichtskarte mit großem Bild
+        en: Summary Card with Large Image
+    help:
+      de: Das Kartenlayout, das Twitter für Links zu dieser Seite verwenden soll.
+      en: The card layout Twitter uses for links to this page.
+  twitterSite:
+    label:
+      de: @username der Website
+      en: @username of website
+    type: text
+    placeholder: "{{ site.twitterSite }}"
+    width: 1/2
+  twitterCreator:
+    label:
+      de: "@username der Autor*in"
+      en: @username of content creator
+    type: text
+    placeholder: "{{ site.twitterCreator }}"
+    width: 1/2

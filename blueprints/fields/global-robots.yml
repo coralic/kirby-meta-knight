@@ -1,0 +1,98 @@
+type: group
+fields:
+  robotsHeadline:
+    label:
+      de: Richtlinien für Suchmaschinen (Robots)
+      en: Robots
+    type: headline
+    numbered: false
+  robotsNoIndex:
+    label:
+      en: No Index
+      de: Seite nicht indexieren
+    type: select
+    options:
+      enabled:
+        de: Aktiviert, Seite darf nicht indexiert werden
+        en: Enabled
+      disabled:
+        de: Deaktiviert, Seite darf indexiert werden
+        en: Disabled
+    default: enabled
+    required: true
+    width: 1/2
+    help:
+      de: Suchmaschinen dürfen diese Seite(n) nicht indexieren und anzeigen.
+      en: Search engines will not index and display page/s.
+  robotsNoFollow:
+    label:
+      en: No Follow
+      de: Links nicht verfolgen
+    type: select
+    options:
+      enabled:
+        de: Aktiviert, Links auf dieser Seite dürfen nicht verfolgt werden
+        en: Enabled
+      disabled:
+        de: Deaktiviert, Links auf dieser Seite dürfen verfolgt werden
+        en: Disabled
+    default: enabled
+    required: true
+    width: 1/2
+    help:
+      de: Suchmaschinen dürfen auf der Seite verlinkte Links nicht verfolgen.
+      en: Search engines will not follow links.
+  robotsNoArchive:
+    label:
+      en: No Archive
+      de: Seite nicht archivieren
+    type: select
+    options:
+      enabled:
+        de: Aktiviert, Seite darf nicht archiviert werden
+        en: Enabled
+      disabled:
+        de: Deaktiviert, Seite darf archiviert werden
+        en: Disabled
+    default: enabled
+    required: true
+    width: 1/2
+    help:
+      de: Suchmaschinen dürfen diese Seite(n) nicht archivieren.
+      en: Search engines will not cache page/s.
+  robotsNoImageIndex:
+    label:
+      en: No Image Index
+      de: Bilder nicht indexieren
+    type: select
+    options:
+      enabled:
+        de: Aktiviert, Bilder dürfen nicht indexiert werden
+        en: Enabled
+      disabled:
+        de: Deaktiviert, Bilder dürfen indexiert werden
+        en: Disabled
+    default: enabled
+    required: true
+    width: 1/2
+    help:
+      de: Bilder auf dieser Seite nicht indexieren und in den Suchergebnissen anzeigen.
+      en: Search engines will not associate page/s with image search results.
+  robotsNoSnippet:
+    label:
+      de: Keine Kurzbschreibungen
+      en: No Snippet
+    type: select
+    options:
+      enabled:
+        de: Aktiviert, Kurzbeschreibungen dürfen nicht angezeigt werden
+        en: Enabled
+      disabled:
+        de: Deaktiviert, Kurzbeschreibungen dürfen angezeigt werden
+        en: Disabled
+    default: enabled
+    required: true
+    width: 1/2
+    help:
+      de: Suchmaschinen dürfen keine Kurzbeschreibungen anzeigen.
+      en: Search engines will not display description snippets for page/s.

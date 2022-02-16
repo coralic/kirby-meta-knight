@@ -1,0 +1,60 @@
+label:
+  de: Metadaten & SEO
+  en: Meta Information (SEO)
+icon: search
+
+columns:
+  globalMeta:
+    width: 2/3
+    sections:
+      globalMeta:
+        type: fields
+        fields:
+          globalMeta: fields/global-meta
+  globalMetaSidebar:
+    width: 1/3
+    sticky: true
+    sections:
+      googlePreview:
+        headline:
+          en: Google Search Preview
+          de: Google Suche
+        type: google-preview
+  openGraph:
+    width: 2/3
+    sections:
+      openGraph:
+        type: fields
+        fields:
+          openGraph: fields/global-open-graph
+  openGraphSidebar:
+    width: 1/3
+    sticky: true
+    sections:
+      facebookPreview:
+        headline:
+          en: Facebook Search Preview
+          de: Facebook Suche
+        type: facebook-preview
+  twitter:
+    width: 2/3
+    sections:
+      twitter:
+        type: fields
+        fields:
+          twitter: fields/global-twitter
+  twitterSidebar:
+    width: 1/3
+    sections:
+      twitterPreview:
+        headline:
+          en: Twitter Search Preview
+          de: Twitter Suche
+        type: twitter-preview
+  robots:
+    width: 2/3
+    sections:
+      robots:
+        type: fields
+        fields:
+          robots: fields/global-robots

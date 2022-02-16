@@ -1,39 +1,93 @@
 type: group
 fields:
-  twitter_headline:
-    label: Twitter Card
+  twitterHeadline:
+    label:
+      en: Twitter Card
+      de: Twitter-Karte
     type: headline
     numbered: false
-  twitter_title:
-    label: Twitter Title
+  twitterTitle:
+    label:
+      en: Twitter Title
+      de: Twitter-Titel
     type: text
     maxlength: 70
-    help: The title of your page as it should appear on Twitter. Will use *page title* as fallback.
-  twitter_description:
-    label: Twitter Description
+    placeholder: "{{ page.twitterTitleComputed }}"
+    help:
+      de: Der Titel der Seite, wie er auf Twitter erscheinen soll. Wird *Seitentitel* als Fallback verwenden.
+      en: The title of your page as it should appear on Twitter. Will use *page title* as fallback.
+  twitterTemplate:
+    label:
+      en: Twitter Title Template (Override)
+      de: Benutzerdefinierte Twitter-Titelvorlage
+    type: text
+    width: 1/2
+    placeholder: '{{ site.twitterTemplate }}'
+    help:
+      de: Eine Vorlage, die für alle Twitterkarten-Titel verwendet werden soll. "\{\{ title }}" wird durch den Unterseitentitel oder den benutzerdefinierten Titel ersetzt.
+      en: A template that is used for all Twitter card titles. "\{\{ title }}" will be replaced by the page title or the user defined title.
+  inheritTwitterTemplate:
+    label:
+      en: Inherit Twitter template for child pages?
+      de: Sollen Unterseiten die Twitter-Titelvorlage erben?
+    type: toggle
+    width: 1/2
+    help:
+      de: Wenn aktiviert, wird die Twitter-Titelvorlage von Unterseiten übernommen.
+      en: If enabled, the Twitter template will be inherited by child pages.
+    text:
+      - de: Nicht vererben, globale Titelvorlage verwenden
+        en: Don't inherit, use global title template
+      - de: Vorlage vererben, Unterseiten benutzen
+        en: Inherit, use parents' page title template
+  twitterDescription:
+    label:
+      en: Twitter Description
+      de: Twitter-Beschreibung
     type: text
     maxlength: 300
-    help: A one to two sentence description of your page. Will use *page description* and *site description* as fallbacks.
-  twitter_image:
-    label: Twitter Image (1200x675)
-    help: Will be cropped automatically.
+    placeholder: "{{ site.twitterDescription.or(site.metaDescription) }}"
+    help:
+      de: Eine ein- bis zweisätzige Beschreibung der Seite. Wird *Seitenbeschreibung*, bzw. die *globale Seitenbeschreibung* als Fallback verwenden.
+      en: A one to two sentence description of your page. Will use *page description* and *site description* as fallbacks.
+  twitterImage:
+    label:
+      en: Twitter Image (1200x675)
+      de: Twitter-Bild (1200x675)
+    help:
+      de: Wird automatisch zugeschnitten.
+      en: Will be cropped automatically.
     type: files
     uploads: seo-image
     multiple: false
     width: 1/2
-  twitter_card_type:
-    label: Card Type
+  twitterCardType:
+    label:
+      de: Kartentyp
+      en: Card Type
     width: 1/2
     type: select
     options:
-      summary_large_image: Summary Card with Large Image
-      summary: Summary Card
-    help: The card layout Twitter uses for links to this page.
-  twitter_site:
-    label: @username of website
+      summary_large_image:
+        de: Übersichtskarte mit großem Bild
+        en: Summary Card with Large Image
+      summary:
+        de: Übersichtskarte
+        en: Summary Card
+    help:
+      de: Das Kartenlayout, das Twitter für Links zu dieser Seite verwenden soll.
+      en: The card layout Twitter uses for links to this page.
+  twitterSite:
+    label:
+      de: @username der Website
+      en: @username of website
     type: text
+    placeholder: "{{ site.twitterSite }}"
     width: 1/2
-  twitter_creator:
-    label: @username of content creator
+  twitterCreator:
+    label:
+      de: "@username der Autor*in"
+      en: @username of content creator
     type: text
+    placeholder: "{{ site.twitterCreator }}"
     width: 1/2

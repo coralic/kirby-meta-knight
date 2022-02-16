@@ -1,15 +1,20 @@
 {
-  "name": "diesdasdigital/kirby-meta-knight",
-  "description": "Meta Knight – SEO for Kirby",
+  "name": "coralic/kirby-meta-knight",
+  "description": "Coralic Meta Knight - SEO for Kirby",
   "type": "kirby-plugin",
-  "version": "1.2.2",
-  "license": "BSD-3-Clause",
+  "version": "2.0.0-beta",
+  "license": "MIT",
   "authors": [
     {
       "name": "Jonathan Muth",
       "email": "jonathan@diesdas.digital",
       "homepage": "https://diesdas.digital",
-      "role": "Developer"
+      "role": "Original Developer"
+    },
+    {
+      "name": "Tobias Möritz",
+      "email": "tobias@moeritz.io",
+      "homepage": "https://moeritz.io"
     }
   ],
   "require": {
@@ -20,7 +25,7 @@
   },
   "autoload": {
     "psr-4": {
-      "diesdasdigital\\kirby-meta-knight\\": "src/models/"
+      "coralic\\kirby-meta-knight\\": "src/models/"
     }
   }
 }
