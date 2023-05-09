@@ -1,3 +1,5 @@
+> **Archived** - use [tobimori/kirby-seo](https://github.com/tobimori/kirby-seo) instead!
+
 # coralic Meta Knight – SEO for Kirby
 
 Our opinionated fork of diesdas.digital's Meta Knight—a SEO and Social Media Sharing Plugin for [Kirby](https://getkirby.com). Meta Knight makes it easier to work with meta information in Kirby's panel.
